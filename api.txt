@@ -1,0 +1,4 @@
+text va audio uchun => https://api.alquran.cloud/v1/surah/2/uz.sodik    
+                       https://alquran.cloud/api
+                       
+channel va radio uchun => https://mp3quran.net/eng
