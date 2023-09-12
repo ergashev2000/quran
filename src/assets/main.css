@@ -3,10 +3,6 @@
 @tailwind utilities;
 
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-
-
 h1,
 h2,
 h3,
@@ -20,12 +16,27 @@ span {
 }
 
 
-body{
+body {
     background-color: #1f2125;
 }
 
-.custom-container{
+.custom-container {
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;
+}
+
+body::-webkit-scrollbar,
+.aside-scroll::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track,
+.aside-scroll::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+body::-webkit-scrollbar-thumb,
+.aside-scroll::-webkit-scrollbar-thumb {
+    background: #2ca4ab;
 }

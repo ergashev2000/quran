@@ -11,7 +11,9 @@
       ></div>
     </div>
     <div class="flex gap-2 items-center justify-center">
-      <h2 class="fixed left-5 bottom-2">{{ props?.audio?.title }}</h2>
+      <h2 class="fixed left-5 bottom-2">
+        {{ props?.audio?.title }} - {{ props?.audio?.address }}
+      </h2>
 
       <audio
         ref="audioElement"
@@ -134,7 +136,6 @@ const isPlaying = ref(true);
 const progress = ref(0);
 
 const props = defineProps(["audio"]);
-console.log(props?.audio);
 
 const togglePlayPause = () => {
   if (audioElement.value.paused) {

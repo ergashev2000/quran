@@ -4,14 +4,16 @@ export const useAudioStore = defineStore({
   id: "audio",
   state: () => ({
     audioData: {
-      src: "", // Initial source URL
-      title: "", // Initial title
+      src: "",
+      title: "",
+      address: "", 
     },
   }),
   actions: {
-    playAudio(src, title) {
+    playAudio(src, title, address) {
       this.audioData.src = src;
       this.audioData.title = title;
+      this.audioData.address = address;
     },
   },
 });
