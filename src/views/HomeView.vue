@@ -18,7 +18,7 @@
     </div>
 
     <!-- Search input -->
-    <InputSearch></InputSearch>
+    <InputSearch/>
 
     <div class="pt-10">
       <h2>Surah</h2>
@@ -34,7 +34,7 @@
 <script setup>
 import { onMounted, ref } from "vue";
 import SurahCard from "../components/SurahCard.vue";
-import InputSearch from "../components/UI/inputSearch.vue";
+import InputSearch from "../components/UI/InputSearch.vue";
 
 import { useSurahsStore } from '@/stores/SurahsStore';
 
