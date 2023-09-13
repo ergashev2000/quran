@@ -39,7 +39,7 @@
 
 <script setup>
 import { ref, computed, watch } from "vue";
-import RadioIcon from "./icons/radioIcon.vue";
+import RadioIcon from "./icons/RadioIcon.vue";
 import { usaTogglePlayPause } from "@/stores/PlayerToggle";
 
 const playerToggle = usaTogglePlayPause();

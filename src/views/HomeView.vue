@@ -48,9 +48,9 @@ import { onMounted, ref, computed } from "vue";
 import SurahCard from "../components/SurahCard.vue";
 import InputSearch from "../components/UI/InputSearch.vue";
 import BannerImage from "../components/icons/BannerImage.vue";
+import VideoPlayer from "../components/VideoPlayer.vue";
 
 import { useSurahsStore } from "@/stores/SurahsStore";
-import VideoPlayer from "../components/VideoPlayer.vue";
 
 const surahsStore = useSurahsStore();
 
