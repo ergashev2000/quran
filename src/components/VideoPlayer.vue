@@ -24,7 +24,6 @@ const videoPlayer = ref(null);
 const playOptions = {
   fill: true,
   fluid: true,
-  autoplay: true,
   controls: true,
   preload: "metadata",
   sources: [
