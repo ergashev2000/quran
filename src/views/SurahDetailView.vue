@@ -5,7 +5,11 @@
     <div class="flex flex-col gap-5 w-[calc(100%-310px)] relative min-h-screen">
       <div
         class="loadingio-spinner-eclipse-e8biyzuu398 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-        v-if="translationTextStore.loading"
+        v-if="
+          translationTextStore.loading ||
+          arabicAudioStore.loading ||
+          arabicAudioStore.loading
+        "
       >
         <div class="ldio-icxd5xrckw">
           <div></div>
@@ -28,7 +32,7 @@
         </div>
         <div
           v-for="(ayahs, index) in translationTextStore?.detailSurah?.ayahs"
-          :key="ayahs.number"
+          :key="ayahs?.number"
           :class="{
             'border-b border-gray-400 p-5 mr-5 relative': true,
             'bg-[#212529]': activeButtonIndex === index,

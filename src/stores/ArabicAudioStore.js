@@ -15,7 +15,6 @@ export const useArabicAudioStore = defineStore("arabicAudio", {
         const response = await axios.get(
           `https://api.alquran.cloud/v1/surah/${id}/ar.alafasy`
         );
-        console.log(response.data.data);
         this.arabicAudio = response.data.data;
       } catch (err) {
         console.error("Error fetching data:", err);

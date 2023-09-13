@@ -33,7 +33,7 @@ const isLinkActive = link => {
 
 const filteredSurahs = computed(() => {
   const id = parseInt(route.params.id);
-  return props.surahs.filter(surah => surah.number === id);
+  return props?.surahs?.filter(surah => surah.number === id);
 });
 </script>
 
