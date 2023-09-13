@@ -1,6 +1,6 @@
 <template>
   <div class="vv">
-    <video ref="videoPlayer" class="video-js"></video>
+    <video ref="videoPlayer" class="video-js" :poster="poster"></video>
   </div>
 </template>
 
@@ -10,28 +10,33 @@ import videojs from "video.js";
 import "video.js/dist/video-js.css";
 
 const props = defineProps({
-  playOptions: {
+  src: {
     type: Object,
     default: () => ({
-      fill: true,
-      fluid: true,
-      autoplay: true,
-      controls: true,
-      preload: "metadata",
-      sources: [
-        {
-          src: "https://win.holol.com/live/quran/playlist.m3u8",
-          type: "application/x-mpegURL",
-        },
-      ],
+      url: "",
     }),
   },
+  poster: String,
 });
 
 const videoPlayer = ref(null);
 
+const playOptions = {
+  fill: true,
+  fluid: true,
+  autoplay: true,
+  controls: true,
+  preload: "metadata",
+  sources: [
+    {
+      src: props.src.url,
+      type: "application/x-mpegURL",
+    },
+  ],
+};
+
 onMounted(() => {
-  videoPlayer.value = videojs(videoPlayer.value, props.playOptions);
+  videoPlayer.value = videojs(videoPlayer.value, playOptions);
 });
 
 onBeforeUnmount(() => {
@@ -43,7 +48,7 @@ onBeforeUnmount(() => {
 
 <style scoped>
 .vv {
-  width: 500px;
-  height: 400px;
+  width: 100%;
+  height: 500px;
 }
 </style>

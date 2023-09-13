@@ -15,7 +15,6 @@ export const useArabicTextStore = defineStore("arabicText", {
         const response = await axios.get(
           `https://api.alquran.cloud/v1/surah/${id}`
         );
-        console.log(response.data.data);
         this.arabicText = response.data.data;
       } catch (err) {
         console.error("Error fetching data:", err);

@@ -17,11 +17,22 @@
     <input
       type="text"
       class="py-3 px-8 rounded-3xl bg-white text-black outline-none w-full"
-      placeholder="Search "
+      placeholder="Search"
+      v-model="searchTerm"
+      @input="emitSearchInput"
     />
   </div>
 </template>
 
 <script setup>
-</script>
+import { ref, defineProps, defineEmits } from "vue";
 
+const { modelValue } = defineProps(["modelValue"]);
+const emit = defineEmits();
+
+const searchTerm = ref(modelValue);
+
+const emitSearchInput = () => {
+  emit("searchinputdata", searchTerm.value);
+};
+</script>

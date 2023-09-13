@@ -5,12 +5,12 @@ export const useSurahsStore = defineStore("surahs", {
   state: () => ({
     surahs: [],
     error: null,
-    loading: false, // Add a loading state
+    loading: false,
   }),
 
   actions: {
     async fetchData() {
-      this.loading = true; // Set loading to true when starting the request
+      this.loading = true;
       try {
         const response = await axios.get("https://api.alquran.cloud/v1/surah");
         this.surahs = response.data.data;
@@ -18,7 +18,7 @@ export const useSurahsStore = defineStore("surahs", {
         console.error("Error fetching data:", err);
         this.error = err;
       } finally {
-        this.loading = false; // Set loading to false when the request is complete (whether successful or not)
+        this.loading = false;
       }
     },
   },
