@@ -1,4 +1,3 @@
-<!-- Layout.vue -->
 <template>
   <AudioPlayer :audio="store?.audioData"></AudioPlayer>
   <Header></Header>
@@ -6,10 +5,6 @@
   <main class="custom-container mx-auto min-h-screen">
     <router-view></router-view>
   </main>
-
-  <footer>
-    <p>Footer ma'lumotlari</p>
-  </footer>
 </template>
 
 <script setup>
