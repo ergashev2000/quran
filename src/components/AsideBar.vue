@@ -1,10 +1,10 @@
 <template>
   <div
-    class="bg-[#343a40] min-w-[300px] py-5 pl-5 fixed top-12 z-20 transition-all duration-500"
-    :class="toggleMenu ? 'translate-x-full' : ' translate-x-0 '"
+    class="bg-[#343a40] min-w-[300px] py-5 pl-5 fixed top-12 z-20 transition-all duration-500 xl:-translate-x-0 xl:left-0"
+    :class="toggleMenu ? 'translate-x-full' : 'xl:translate-x-0 '"
   >
     <button
-      class="-left-7 z-20 text-white top-1 absolute bg-black bg-opacity-70 flex justify-center items-center w-8 h-8 rounded"
+      class="-left-7 z-20 text-white top-1 absolute bg-black bg-opacity-70  justify-center items-center w-8 h-8 rounded flex xl:hidden"
       @click="toggleMenu = !toggleMenu"
     >
       <Arrow class="w-6 h-6" />
