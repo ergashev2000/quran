@@ -14,7 +14,3 @@ import AudioPlayer from "../components/AudioPlayer.vue";
 import { useAudioStore } from "@/stores/AudioDataStore";
 const store = useAudioStore();
 </script>
-
-<style scoped>
-/* Your layout styles here */
-</style>

@@ -18,7 +18,7 @@
 
     <InputSearch @searchinputdata="handleSearchInput" />
 
-    <div class="pt-10">
+    <div class="pt-5 xl:pt-10">
       <h2 class="text-center text-2xl font-semibold py-5">Surahs</h2>
       <ul
         class="grid grid-cols-1 pb-5 md:grid-cols-2 gap-2 xl:grid-cols-3 2xl:grid-cols-4"
@@ -34,8 +34,8 @@
         />
       </ul>
       <hr />
-      <h2 class="text-4xl text-start pt-10 font-semibold">Lives</h2>
-      <div class="flex justify-between items-center gap-4 pt-2">
+      <h2 class="text-4xl text-start font-semibold pt-5">Lives</h2>
+      <div class="gap-3 pt-5 grid grid-cols-1 xl:grid-cols-2">
         <VideoPlayer v-for="src in videoSource" :src="src" :key="src.id" :poster="src?.poster" />
       </div>
     </div>

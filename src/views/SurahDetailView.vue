@@ -1,8 +1,9 @@
 <template>
   <div class="flex gap-5 justify-end my-16">
+
     <AsideBar :surahs="surahsStore?.surahs" />
 
-    <div class="flex flex-col gap-5 w-[calc(100%-310px)] relative min-h-screen">
+    <div class="flex flex-col gap-5 w-full xl:w-[calc(100%-310px)] relative min-h-screen">
       <div
         class="loadingio-spinner-eclipse-e8biyzuu398 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
         v-if="
@@ -16,7 +17,7 @@
         </div>
       </div>
       <template v-else>
-        <div class="text-center bg-[#272f33] py-7 rounded-md mr-5">
+        <div class="text-center bg-[#272f33] py-7 rounded-md mx-2 xl:mr-5">
           <h2 class="text-3xl font-semibold">
             {{ translationTextStore?.detailSurah?.englishName }}
           </h2>
@@ -34,7 +35,7 @@
           v-for="(ayahs, index) in translationTextStore?.detailSurah?.ayahs"
           :key="ayahs?.number"
           :class="{
-            'border-b border-gray-400 p-5 mr-5 relative': true,
+            'border-b border-gray-400 p-5 xlmr-5  relative': true,
             'bg-[#212529]': activeButtonIndex === index,
           }"
         >

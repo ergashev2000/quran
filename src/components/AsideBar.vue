@@ -1,10 +1,23 @@
 <template>
-  <div class="bg-[#343a40] min-w-[300px] py-5 pl-5 fixed top-12 left-0">
+  <div
+    class="bg-[#343a40] min-w-[300px] py-5 pl-5 fixed top-12 z-20 transition-all duration-500"
+    :class="toggleMenu ? 'translate-x-full' : ' translate-x-0 '"
+  >
+    <button
+      class="-left-7 z-20 text-white top-1 absolute bg-black bg-opacity-70 flex justify-center items-center w-8 h-8 rounded"
+      @click="toggleMenu = !toggleMenu"
+    >
+      <Arrow class="w-6 h-6" />
+    </button>
     <h3 class="text-lg text-center py-2 border-b border-gray-400">
       {{ filteredSurahs[0]?.englishName }}
     </h3>
     <ul class="h-[calc(100vh-140px)] overflow-y-scroll pr-2 py-2 aside-scroll">
-      <li v-for="surah in props.surahs" :key="surahs.name">
+      <li
+        v-for="surah in props.surahs"
+        :key="surah.name"
+        @click="toggleMenu = !toggleMenu"
+      >
         <router-link
           :to="{ name: 'SurahDetail', params: { id: surah?.number } }"
           :class="{
@@ -21,9 +34,11 @@
 </template>
 
 <script setup>
-import { computed, defineProps, onMounted } from "vue";
+import { computed, defineProps, ref } from "vue";
 import { useRoute } from "vue-router";
+import Arrow from "./icons/Arrow.vue";
 const route = useRoute();
+const toggleMenu = ref(true);
 
 const props = defineProps(["surahs"]);
 
